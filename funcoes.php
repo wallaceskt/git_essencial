@@ -7,4 +7,10 @@ function Teste() {
 
 }
 
+function branchFuncao2($num=0) {
+
+	return FALSE;
+
+}
+
 ?>
