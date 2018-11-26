@@ -7,9 +7,13 @@ function Teste() {
 
 }
 
-function branchFuncao2($num=0) {
+function brancFuncao2($id) {
 
-	return FALSE;
+	if ($id>=0) {
+		
+		return TRUE;
+		
+	}
 
 }
 
