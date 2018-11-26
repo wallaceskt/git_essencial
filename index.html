@@ -26,10 +26,11 @@
 				<p>git init: Initializa repositório vazio em um diretório existente. Ex: /Users/wallacesales/Sites/git_essencial/.git/</p>
 				<p>git status: Verifica o estado dos seus arquivos.</p>
 				<p>touch <em>&lt;nome do arquivo&gt;</em>: Cria um arquivo no repositório.</p>
-				<p>git add <em>&lt;nome do arquivo&gt;</em>: Diz explicitamente ao Git para monitorar um arquivo. Retira o arquivo do working directory (diretório de trabalho) e manda para stage area (área intermediária). Um commit só pode ser feito caso o arquivos criado/alterado esteja adicionado na stage area.</p>
+				<p>git add <em>&lt;nome do arquivo&gt;</em>: Diz explicitamente ao Git para monitorar um arquivo. Retira o arquivo do working directory (diretório de trabalho) e manda para staging area (área intermediária). Um commit só pode ser feito caso o arquivos criado/alterado esteja adicionado na staging area.</p>
 				<p>git add -A: -A faz o git adicionar todos os arquivos.</p>
 				<p>git add .: Faz o git adicionar todos os arquivos.</p>
 				<p>git add *.txt: *.txt faz o git adicionar todos os arquivos de texto com extensão .txt. Pode ser usada qualquer extensão.</p>
+				<p>git rm <em>&lt;nome do arquivo&gt;</em>: para remover um arquivo do Git, é preciso removê-lo da staging area e, depois, fazer o commit. O comando git rm também remove o arquivo do working directory.</p>
 				<p>git commit -m <em>&lt;nome do arquivo&gt;</em>: Envia diretório(s) e/ou arquivo(s) ao repositório.</p>
 				<p>git commit -a -m: Envia arquivo(s) ao repositório sem precisar do comando git add para adicionar à stage area, pois o -a já faz esse papel.</p>
 				<p>git commit --amend -m: Edita um commit já feito. Não cria um novo commit, mas adiciona as alterações. Contudo, o hash (chave) muda.</p>
@@ -41,7 +42,7 @@
 				<p>git log -pretty=oneline <em>&lt;nome do arquivo&gt;</em>: Mostra apenas o hash do commit e a mensagem.</p>
 				<p>git revert <em>&lt;nome do arquivo&gt;</em>: Remove um commit específico da lista de commits.</p>
 				<p>git diff: Exibe as diferenças num determinado arquivo que está no working directory.</p>
-				<p>git diff --staged: Exibe as diferenças num determinado arquivo que está na stage area.</p>
+				<p>git diff --staged: Exibe as diferenças num determinado arquivo que está na staging area.</p>
 
 			</article>
 
