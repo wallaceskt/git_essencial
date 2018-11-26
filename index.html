@@ -36,13 +36,16 @@
 				<h2>Comandos</h2>
 				<p>git init: Initializa repositório vazio em um diretório existente. Ex: /Users/wallacesales/Sites/git_essencial/.git/</p>
 				<p>git status: Verifica o estado dos seus arquivos.</p>
-				<p>git add: Diz explicitamente ao Git para monitorar um arquivo. Um commit só pode ser feito caso o arquivos criado/alterado esteja adicionado.</p>
+				<p>touch <em>+ nome do arquivo</em>: Cria um arquivo no repositório.</p>
+				<p>git add <em>+ nome do arquivo</em>: Diz explicitamente ao Git para monitorar um arquivo. Retira o arquivo do working directory (diretório de trabalho) e manda para stage area (área intermediária). Um commit só pode ser feito caso o arquivos criado/alterado esteja adicionado.</p>
 				<p>git add -A: -A faz o git adicionar todos os arquivos.</p>
-				<p>git commit: Faz o commit das mudanças feitas nos arquivos.</p>
-				<p>git checkout: Desfaz as modificações no arquivo que ainda não está em ambiente de stage.</p>
-				<p>git reset HEAD: Remove o arquivo alterado do espaço de stage para permitir o uso do comando git checkout para desfazer as modificações feitas no arquivo.</p>
+				<p>git add *.txt: *.txt faz o git adicionar todos os arquivos de texto com extensão .txt. Pode ser usada qualquer extensão.</p>
+				<p>git commit -m <em>+ nome do arquivo</em>: Envia diretório(s) e/ou arquivo(s) ao repositório.</p>
+				<p>git checkout <em>+ nome do arquivo</em>: Desfaz as modificações no arquivo que ainda não está em ambiente de stage.</p>
+				<p>git reset HEAD <em>+ nome do arquivo</em>: Remove o arquivo alterado do espaço de stage para permitir o uso do comando git checkout para desfazer as modificações feitas no arquivo.</p>
 				<p>git log: Serve para analisar todos os commits realizados no repositório.</p>
-				<p>git revert <em><hash do commit></em>: Remove um commit específico da lista de commits.</p>
+				<p>git revert <em>+ nome do arquivo</em>: Remove um commit específico da lista de commits.</p>
+				<p>git diff <em>+ nome do arquivo</em>: Exibe as diferenças num determinado arquivo.</p>
 
 			</article>
 
