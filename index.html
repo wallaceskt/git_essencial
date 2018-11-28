@@ -32,7 +32,7 @@
 				<p>git add *.txt: *.txt faz o git adicionar todos os arquivos de texto com extensão .txt. Pode ser usada qualquer extensão.</p>
 				<p>git rm <em>&lt;nome do arquivo&gt;</em>: Para remover um arquivo do Git, é preciso removê-lo da staging area e, depois, fazer o commit. O comando git rm também remove o arquivo do working directory.</p>
 				<p>git mv <em>&lt;nome do arquivo&gt;</em>: Altera o nome de um arquivo do repositório.</p>
-				<p>git commit -m <em>&lt;nome do arquivo&gt;</em>: Envia diretório(s) e/ou arquivo(s) ao repositório.</p>
+				<p>git commit -m <em>&lt;nome do arquivo&gt;</em>: Envia diretório(s) e/ou arquivo(s) ao repositório. vale lembrar que os commits são todos locais.</p>
 				<p>git commit -a -m: Envia arquivo(s) ao repositório sem precisar do comando git add para adicionar à stage area, pois o -a já faz esse papel.</p>
 				<p>git commit --amend -m: Edita um commit já feito. Não cria um novo commit, mas adiciona as alterações. Contudo, o hash (chave) muda.</p>
 				<p>git checkout <em>&lt;nome do arquivo&gt;</em>: Desfaz as modificações no arquivo que ainda não está em ambiente de stage.</p>
@@ -42,15 +42,20 @@
 				<p>git log -p -n: -n é o número de commits desejável. Exemplo: git log -p -1.</p>
 				<p>git log -pretty=oneline <em>&lt;nome do arquivo&gt;</em>: Mostra apenas o hash do commit e a mensagem.</p>
 				<p>git log --online --decorate: Condensa cada commit em uma única linha. O sinalizador --decorate faz o git log exibir todas as referências (por exemplo, branches (ramificações), tags, etc.) que apontam para cada commit.</p>
+				<p>git log --online --decorate --all --graph: Condensa cada commit e exibe em forma de gráfico.</p>
 				<p>git revert <em>&lt;nome do arquivo&gt;</em>: Remove um commit específico da lista de commits.</p>
 				<p>git diff: Exibe as diferenças num determinado arquivo que está no working directory.</p>
 				<p>git diff --staged: Exibe as diferenças num determinado arquivo que está na staging area.</p>
+				
+				<p>Tag</p>
 				<p>git tag: O Git tem a capacidade de marcar pontos específicos na história como sendo importantes. Normalmente, as pessoas usam essa funcionalidade para marcar pontos de lançamento. Exemplo: git tag -a v1.0 -m "Versão 1.0.".</p>
 				<p>git tag -a <em>&lt;tag&gt;</em> -m: Cria a tag no momento atual do repositório. Exemplo: git tag -a v1.0 -m "Versão 1.0.".</p>
 				<p>git tag -a <em>&lt;tag + hash do commit&gt;</em> -m: Cria a tag num momento anterior do repositório. Exemplo: git tag -a v0.0 2b1e9f027d29882acd2b9407eb99a97003c13aef -m "Versão 0.0.".</p>
 				<p>git show <em>&lt;tag&gt;</em>: Exibe os detalhes da tag. Exemplo: git show v1.0.</p>
 				<p>git checkout <em>&lt;tag&gt;</em>: Troca o repositório (versão do sistema/projeto) para o status em que a tag foi criada. Exemplo: git checkout v0.0.</p>
 				<p>git tag -d <em>&lt;tag&gt;</em>: Exclui a tag. Exemplo: git tag -d v0.0.</p>
+				
+				<p>Branch</p>
 				<p>git branch <em>&lt;branch&gt;</em>: Cria um branch (ramificação). O uso de tags para controlar versão e/ou criar ambientes diferentes de desenvolvimento de um projeto pode trazer transtornos. O melhor é fazer o uso de branches (ramificações), pois permite trabalhar com varias ramificações diferentes sem que uma interfira na outra.</p>
 				<p>git checkout <em>&lt;branch&gt;</em>: Faz a transição dos arquivos do branch master para o novo branch criado.</p>
 				<p>git checkout -b <em>&lt;branch&gt;</em>: Uma forma simplificada para criar o branch e fazer a transição dos arquivos do branch master para ele.</p>
@@ -62,6 +67,21 @@
 				<p>git stash drop <em>&lt;stash&gt;</em>: Apaga o arquivo do stash. Ex: git stash drop stash@{0}.</p>
 				<p>git stash pop: Devolve o arquivo para a staging area e apaga o arquivo do stash. Ex: git stash pop.</p>
 				<p>git stash branch <em>&lt;branch&gt;</em>: Cria um novo branch a partir de um stash.</p>
+
+				<p>Push, ou empurrar, é a ação de atualizar uma referência remota a partir de uma referência local, enviando os objetos necessários para satisfazer as referências atualizadas.</p>
+				<p>git remote add <em>&lt;nome&gt;</em>: Adiciona o repositório remoto. Ex: git remote add origin https://github.com/rodrigobranas/gitpresentation</p>
+				<p>git remote: Exibe o repositório remoto configurado.</p>
+				<p>git remote -v: Exibe o repositório remoto configurado com o endereço.</p>
+				<p>git push: Envia os commits ao repositório remoto.</p>
+				<p>git push origin master: Envia os commits ao repositório remoto, origin, a partir do master.</p>
+
+				<p>Pull, ou puxar, é a ação de atualizar uma referência local a partir de uma referência remote, trazendo os objetos necessários para satisfazer as referências atualizadas. O cuidado que se deve ter é porque o git pull faz merge automaticamente.</p>
+				<p>git pull: Faz a operação inversa do push.</p>
+				<p>git pull origin master: Recebe os commits ao repositório remoto, origin.</p>
+				<p>git fetch: Faz o pull pela metade. Ele só traz as atualizações e aplica. Não faz merge.</p>
+				<p>git diff master origin/master: Exibe as diferenças entre master e origin/master.</p>
+				<p>git merge origin/master: Faz a mesclagem dos arquivos com o origin. Fazer apenas se o diff não apresentar nenhum conflito.</p>
+				<p>git clone <em>&lt;endereço de origem&gt;</em> <em>&lt;destino&gt;</em>: Clona um repositório remoto.</p>
 
 			</article>
 
