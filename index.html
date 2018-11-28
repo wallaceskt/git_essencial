@@ -56,7 +56,11 @@
 				<p>git checkout -b <em>&lt;branch&gt;</em>: Uma forma simplificada para criar o branch e fazer a transição dos arquivos do branch master para ele.</p>
 				<p>git branch -d <em>&lt;branch&gt;</em>: Deleta o branch.</p>
 
-				<p>Stach é uma área, onde é possível armazenar código, sem a necessidade de realizar um commit,permitindo mudar de brach ou realizar outras operações de forma organizada.</p>
+				<p>Stash é uma área, onde é possível armazenar código, sem a necessidade de realizar um commit,permitindo mudar de brach ou realizar outras operações de forma organizada.</p>
+				<p>git stash save "<em>&lt;flag&gt;</em>": Envia o arquivo para o stash retirando o da staging area. Após o comando, o git exibe mensagem como: stash@{0}: On feature4: h.txt.</p>
+				<p>git stash apply <em>&lt;stash&gt;</em>: Devolve o arquivo para a staging area, mas ainda continua no stash. Ex: git stash apply stash@{0}.</p>
+				<p>git stash drop <em>&lt;stash&gt;</em>: Apaga o arquivo do stash. Ex: git stash drop stash@{0}.</p>
+				<p>git stash pop: Devolve o arquivo para a staging area e apaga o arquivo do stash. Ex: git stash pop.</p>
 
 			</article>
 
